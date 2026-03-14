@@ -1,0 +1,36 @@
+// WeilGuard — On-Chain AI Agent Security & Compliance Monitor
+// WIDL Interface Definition for WeilChain deployment
+// Hackathon: Xpecto Weilliptic 2026 @ IIT Mandi
+
+service WeilGuard {
+
+  // Register an AI agent with its governance policy
+  // Returns agent_id on success
+  mutate register_agent(agent_id: string, policy_json: string) -> string
+
+  // Record an agent action — called by the agent or orchestrator
+  // Returns a tamper-proof log hash (event_id)
+  mutate log_event(agent_id: string, action: string, payload: string) -> string
+
+  // Evaluate if a proposed action is policy-compliant BEFORE execution
+  // Returns "ALLOW" or "DENY:<reason>"
+  query check_policy(agent_id: string, proposed_action: string) -> string
+
+  // Retrieve the full audit log for an agent (JSON array)
+  query get_audit_log(agent_id: string) -> string
+
+  // Flag a compliance violation manually or via automated rule
+  mutate flag_violation(agent_id: string, reason: string, severity: string) -> string
+
+  // Retrieve all violations for an agent
+  query get_violations(agent_id: string) -> string
+
+  // Get compliance score (0–100) for an agent based on history
+  query compliance_score(agent_id: string) -> u32
+
+  // Revoke / deactivate a misbehaving agent
+  mutate revoke_agent(agent_id: string, reason: string) -> bool
+
+  // Admin: Update the governance policy for a registered agent
+  mutate update_policy(agent_id: string, new_policy_json: string) -> bool
+}

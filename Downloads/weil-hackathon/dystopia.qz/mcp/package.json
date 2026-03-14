@@ -1,0 +1,20 @@
+{
+  "name": "weilguard-mcp",
+  "version": "0.1.0",
+  "description": "WeilGuard MCP server — exposes on-chain audit & compliance tools to LLMs via Icarus",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev":   "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "@weilliptic/weil-sdk": "latest",
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "ts-node":    "^10.0.0",
+    "@types/node": "^20.0.0"
+  }
+}

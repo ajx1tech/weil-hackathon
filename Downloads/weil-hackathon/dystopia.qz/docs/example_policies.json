@@ -1,0 +1,36 @@
+{
+  "examples": {
+    "email_bot": {
+      "description": "Email automation agent — conservative policy",
+      "policy": {
+        "allowed_actions": ["send_email", "read_inbox", "schedule_meeting", "draft_email"],
+        "denied_actions":  ["delete_inbox", "forward_all", "export_contacts"],
+        "require_human_approval": ["send_bulk_email", "send_external_email"]
+      }
+    },
+    "data_analyst": {
+      "description": "Data analysis agent — read-only enforced",
+      "policy": {
+        "allowed_actions": ["read_db", "run_query", "generate_report", "export_csv"],
+        "denied_actions":  ["drop_table", "delete_records", "alter_schema", "export_all"],
+        "require_human_approval": ["create_table", "update_records"]
+      }
+    },
+    "devops_bot": {
+      "description": "CI/CD deployment agent — gated releases",
+      "policy": {
+        "allowed_actions": ["run_tests", "build_image", "push_staging"],
+        "denied_actions":  ["rollback_prod", "delete_cluster", "expose_secrets"],
+        "require_human_approval": ["deploy_prod", "scale_down", "modify_iam"]
+      }
+    },
+    "financial_agent": {
+      "description": "Finance agent — strict controls",
+      "policy": {
+        "allowed_actions": ["read_transactions", "generate_invoice", "check_balance"],
+        "denied_actions":  ["transfer_funds", "create_account", "delete_records"],
+        "require_human_approval": ["approve_payment", "reconcile_accounts", "file_tax"]
+      }
+    }
+  }
+}

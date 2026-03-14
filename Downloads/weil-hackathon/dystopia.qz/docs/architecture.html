@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>WeilGuard Architecture</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #0d1117; color: #e6edf3; margin: 40px; }
+    h1 { color: #58a6ff; font-size: 1.6rem; margin-bottom: 4px; }
+    .sub { color: #8b949e; margin-bottom: 32px; font-size: 0.95rem; }
+    .arch { display: flex; flex-direction: column; align-items: center; gap: 0; }
+    .box { border-radius: 12px; padding: 16px 32px; text-align: center; font-size: 0.95rem; font-weight: 600; min-width: 320px; }
+    .arrow { font-size: 1.5rem; color: #58a6ff; margin: 2px 0; }
+    .label { font-size: 0.75rem; color: #8b949e; margin-top: -4px; margin-bottom: 4px; }
+    .enterprise { background: #1f2937; border: 2px solid #58a6ff; color: #58a6ff; }
+    .mcp        { background: #1a2e1a; border: 2px solid #3fb950; color: #3fb950; }
+    .applet     { background: #2e1a1a; border: 2px solid #f85149; color: #f85149; }
+    .chain      { background: #1e1a2e; border: 2px solid #a371f7; color: #a371f7; }
+    .tools { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 32px; }
+    .tool { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 10px 16px; font-size: 0.82rem; }
+    .tool .name { color: #58a6ff; font-weight: 700; }
+    .tool .desc { color: #8b949e; margin-top: 2px; }
+    .badges { display: flex; gap: 12px; justify-content: center; margin-top: 24px; flex-wrap: wrap; }
+    .badge { background: #21262d; border: 1px solid #30363d; border-radius: 20px; padding: 6px 14px; font-size: 0.8rem; color: #e6edf3; }
+  </style>
+</head>
+<body>
+  <h1>🛡️ WeilGuard Architecture</h1>
+  <div class="sub">On-Chain AI Agent Security & Compliance Monitor — Xpecto Weilliptic 2026</div>
+
+  <div class="arch">
+    <div class="box enterprise">🤖 Enterprise LLM Agent / Icarus UI</div>
+    <div class="arrow">↕</div>
+    <div class="label">MCP Protocol (9 tools)</div>
+    <div class="box mcp">⚙️ WeilGuard MCP Server (TypeScript)</div>
+    <div class="arrow">↕</div>
+    <div class="label">@weilliptic/weil-sdk</div>
+    <div class="box applet">🦀 WeilGuard Applet (Rust / WASM)</div>
+    <div class="arrow">↕</div>
+    <div class="label">WeilChain Runtime</div>
+    <div class="box chain">🔗 WeilChain Asia Pod — Immutable On-Chain State</div>
+  </div>
+
+  <div class="tools">
+    <div class="tool"><div class="name">register_agent</div><div class="desc">Onboard agent + policy</div></div>
+    <div class="tool"><div class="name">check_policy</div><div class="desc">Pre-execution gate</div></div>
+    <div class="tool"><div class="name">log_event</div><div class="desc">Immutable action log</div></div>
+    <div class="tool"><div class="name">compliance_score</div><div class="desc">0–100 risk score</div></div>
+    <div class="tool"><div class="name">flag_violation</div><div class="desc">Manual / auto alert</div></div>
+    <div class="tool"><div class="name">get_audit_log</div><div class="desc">Full cryptographic trail</div></div>
+    <div class="tool"><div class="name">get_violations</div><div class="desc">Violation registry</div></div>
+    <div class="tool"><div class="name">revoke_agent</div><div class="desc">Kill-switch</div></div>
+    <div class="tool"><div class="name">update_policy</div><div class="desc">Dynamic governance</div></div>
+  </div>
+
+  <div class="badges">
+    <div class="badge">🦀 Rust / WASM Applet</div>
+    <div class="badge">📋 WIDL Interface</div>
+    <div class="badge">🔗 WeilChain</div>
+    <div class="badge">🛠️ MCP Server</div>
+    <div class="badge">🌏 Asia Pod Deployed</div>
+    <div class="badge">🔒 SHA-256 Event IDs</div>
+  </div>
+</body>
+</html>
