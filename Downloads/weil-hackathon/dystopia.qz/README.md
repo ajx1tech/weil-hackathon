@@ -1,9 +1,12 @@
 # WeilGuard 🛡️
-### On-Chain AI Agent Security, Policy Enforcement & Compliance Monitoring
+#On-Chain AI Agent Security, Policy Enforcement & Compliance Monitoring
 
-> Hackathon: **Xpecto Weilliptic 2026 @ IIT Mandi**  
+## Live Demo
+Watch WeilGuard in action: https://www.loom.com/share/eb55932e052845a88d2a1f430068bbba
+  
 > Platform: **WeilChain** (Weilliptic)  
 > Track: Autonomous Agent Security
+
 
 ---
 
