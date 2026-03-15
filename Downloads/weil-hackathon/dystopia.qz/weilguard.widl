@@ -1,6 +1,6 @@
 // WeilGuard — On-Chain AI Agent Security & Compliance Monitor
 // WIDL Interface Definition for WeilChain deployment
-// Hackathon: Xpecto Weilliptic 2026 @ IIT Mandi
+
 
 service WeilGuard {
 
