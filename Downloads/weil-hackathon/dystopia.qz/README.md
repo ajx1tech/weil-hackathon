@@ -187,11 +187,5 @@ This directly leverages WeilChain's core promise: *provable trust, verifiable ex
 
 ---
 
-## 👥 Team
-- [Ajit Sharma] - Leader
-- [Ram Gangul]
-- [Atharva Sheshgiri]
-- [Namika Sharma]
-
 ## 📄 License
 MIT
